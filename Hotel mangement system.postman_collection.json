@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f768b79a-dd68-498e-b5fa-ae9619f43046",
+		"_postman_id": "f3d6b38c-9478-46ab-ba18-982de546e420",
 		"name": "Hotel mangement system",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26179493"
+		"_exporter_id": "31908169"
 	},
 	"item": [
 		{
@@ -35,7 +35,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/bookings/3",
+							"raw": "http://localhost:9090/api/bookings/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -44,7 +44,7 @@
 							"path": [
 								"api",
 								"bookings",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -174,13 +174,40 @@
 					"response": []
 				},
 				{
+					"name": "Get-by-first-name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/guests/by-first-name?firstLetter=a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"guests",
+								"by-first-name"
+							],
+							"query": [
+								{
+									"key": "firstLetter",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Guest",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\" : \"Aditya\",\r\n    \"lastName\":\"Tiwari\",\r\n    \"email\":\"abc@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"firstName\" : \"Ankit\",\r\n    \"lastName\":\"Tiwari\",\r\n    \"email\":\"abcd@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -208,7 +235,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/guests/3",
+							"raw": "http://localhost:9090/api/guests/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -217,34 +244,7 @@
 							"path": [
 								"api",
 								"guests",
-								"3"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get-by-first-name",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:9090/api/guests/by-first-name?firstLetter=A",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "9090",
-							"path": [
-								"api",
-								"guests",
-								"by-first-name"
-							],
-							"query": [
-								{
-									"key": "firstLetter",
-									"value": "A"
-								}
+								"2"
 							]
 						}
 					},
@@ -615,6 +615,129 @@
 				},
 				{
 					"name": "Delete Staff",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/staff/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"staff",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/user/by-user-name?userName=Ankit-tiwari",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user",
+								"by-user-name"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "Ankit-tiwari"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Ankit-tiwari\",\r\n    \"password\":\"A124554\",\r\n    \"email\":\"xyz@gmail.com\",\r\n    \"active\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
 					"request": {
 						"method": "DELETE",
 						"header": [],
