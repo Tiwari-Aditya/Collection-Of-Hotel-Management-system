@@ -78,6 +78,29 @@
 					"response": []
 				},
 				{
+					"name": "getBookingPagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/bookings/pageing-and-sorting-booking/0/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"bookings",
+								"pageing-and-sorting-booking",
+								"0",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Booking",
 					"request": {
 						"method": "POST",
@@ -158,7 +181,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/guests/2",
+							"raw": "http://localhost:9090/api/guests/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -167,14 +190,14 @@
 							"path": [
 								"api",
 								"guests",
-								"2"
+								"1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get-by-first-name",
+					"name": "Get-by-first-letter",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -201,13 +224,36 @@
 					"response": []
 				},
 				{
+					"name": "getGuestPagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/guests/pageing-and-sorting-guest/0/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"guests",
+								"pageing-and-sorting-guest",
+								"0",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Guest",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\" : \"Ankit\",\r\n    \"lastName\":\"Tiwari\",\r\n    \"email\":\"abcd@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"firstName\" : \"Abhishek\",\r\n    \"lastName\":\"Kumar\",\r\n    \"email\":\"abcdef@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -281,7 +327,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/payments/2",
+							"raw": "http://localhost:9090/api/payments/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -290,7 +336,7 @@
 							"path": [
 								"api",
 								"payments",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -473,7 +519,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/room-types/2",
+							"raw": "http://localhost:9090/api/room-types/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -482,7 +528,7 @@
 							"path": [
 								"api",
 								"room-types",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -714,7 +760,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"Ankit-tiwari\",\r\n    \"password\":\"A124554\",\r\n    \"email\":\"xyz@gmail.com\",\r\n    \"active\":\"true\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"Aditya-tiwari\",\r\n    \"password\":\"A124554\",\r\n    \"email\":\"xy@gmail.com\",\r\n    \"active\":\"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -742,7 +788,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/api/staff/3",
+							"raw": "http://localhost:9090/api/user/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -750,7 +796,7 @@
 							"port": "9090",
 							"path": [
 								"api",
-								"staff",
+								"user",
 								"3"
 							]
 						}
